@@ -2,3 +2,4 @@ src/**/*.js
 *.map
 
 .idea
+node_modules
