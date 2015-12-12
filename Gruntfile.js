@@ -4,21 +4,44 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON("package.json"),
 
-		tslint: {
-			options: {
-				configuration: "tslint.json"
+		meta: {
+			src: "src/app/**/*.ts"
+		},
+
+		ts: {
+			default : {
+				src: [
+					"<%= meta.src %>",
+					"!node_modules/**/*.ts"
+				]
 			},
+			options: {
+				target: "ES5",
+				module: "commonjs",
+				sourceMap: true,
+				emitDecoratorMetadata: true,
+				experimentalDecorators: true,
+				removeComments: false,
+				noImplicitAny: true
+			}
+		},
+
+		tslint: {
 			app: {
 				src: [
-					"src/app/**/*.ts"
+					"<%= meta.src %>"
 				]
+			},
+			options: {
+				configuration: "tslint.json"
 			}
 		}
 	});
 
+	grunt.loadNpmTasks("grunt-ts");
 	grunt.loadNpmTasks("grunt-tslint");
 
 	// Default task(s).
-	grunt.registerTask("default", ["tslint:app"]);
+	grunt.registerTask("default", ["tslint:app", "ts"]);
 
 };

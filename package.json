@@ -4,7 +4,6 @@
   "description": "Simple quick start app for Angular 2.0",
   "main": "app.js",
   "scripts": {
-    "tsc": "tsc -p src -w",
     "start": "live-server --open=src",
     "test": "live-server --open=src/unit-tests.html"
   },
@@ -16,6 +15,7 @@
   },
   "devDependencies": {
     "grunt": "0.4.5",
+    "grunt-ts": "^5.2.0",
     "grunt-tslint": "^3.0.1",
     "jasmine-core": "2.4.1",
     "live-server": "^0.9.0",

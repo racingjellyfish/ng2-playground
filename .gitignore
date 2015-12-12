@@ -2,4 +2,6 @@ src/**/*.js
 *.map
 
 .idea
+.tscache
+
 node_modules
