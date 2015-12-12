@@ -1,8 +1,8 @@
-import {Hero} from './Hero';
+import {Hero} from "./Hero";
 
-describe('Hero', () => {
+describe("Hero", () => {
 	let id: number = 1;
-	let name: string = 'Test Hero';
+	let name: string = "Test Hero";
 
 	let hero: Hero;
 
@@ -10,11 +10,11 @@ describe('Hero', () => {
 		hero = new Hero(id, name);
 	});
 
-	it('has the id given in the constructor', () => {
+	it("has the id given in the constructor", () => {
 		expect(hero.id).toEqual(id);
 	});
 
-	it('has the name given in the constructor', () => {
+	it("has the name given in the constructor", () => {
 		expect(hero.name).toEqual(name);
 	});
 });

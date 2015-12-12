@@ -1,10 +1,10 @@
-import {Pipe} from 'angular2/angular2';
+import {Pipe} from "angular2/angular2";
 
 @Pipe({
-	name: 'initCaps'
+	name: "initCaps"
 })
 export class InitCapsPipe {
-	transform(value: string): string {
-		return value.toLowerCase().replace(/(?:^|\s)[a-z]/g, m => m.toUpperCase());
+	public transform(value: string): string {
+		return value.toLowerCase().replace(/(?:^|\s)[a-z]/g, (m: string) => m.toUpperCase());
 	}
 }

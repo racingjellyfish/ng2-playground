@@ -1,7 +1,7 @@
-import {Injectable} from 'angular2/angular2';
-import {Hero} from './Hero';
+import {Injectable} from "angular2/angular2";
+import {Hero} from "./Hero";
 
-var HEROES: Hero[] = [
+let HEROES: Hero[] = [
 	{
 		"id": 11,
 		"name": "Mr. Nice"
@@ -52,7 +52,7 @@ export class HeroService {
 		this.heroes = HEROES;
 	}
 
-	getHeroes(): Hero[] {
+	public getHeroes(): Hero[] {
 		return this.heroes;
 	}
 }
