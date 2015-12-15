@@ -5,7 +5,7 @@ import {InitCapsPipe} from "../InitCaps.pipe";
 @Component({
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	directives: [FORM_DIRECTIVES],
-	pipes: [InitCapsPipe],
+	pipes: [[InitCapsPipe]],
 	selector: "hero-detail",
 	styleUrls: ["app/app.css"],
 	templateUrl: "app/hero/views/heroDetail.component.html"
@@ -13,3 +13,7 @@ import {InitCapsPipe} from "../InitCaps.pipe";
 export class HeroDetailComponent {
 	@Input() public hero: Hero;
 }
+
+/*
+ pipes: [InitCapsPipe],
+ */

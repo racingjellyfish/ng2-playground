@@ -4,7 +4,7 @@ import {HeroDetailComponent} from "./HeroDetail.component";
 import {HeroService} from "./Hero.service";
 
 @Component({
-	directives: [CORE_DIRECTIVES, HeroDetailComponent],
+	directives: [[CORE_DIRECTIVES, HeroDetailComponent]],
 	selector: "hero-list",
 	styleUrls: ["app/app.css"],
 	templateUrl: "app/hero/views/heroList.component.html"
